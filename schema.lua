@@ -1,3 +1,10 @@
+-- Most of this code was copied from ip-restriction
+-- several changes, blacklist is no longer supported
+-- parameters are
+--  whitelist - a comma separated (array) value of ip/cidr addresses - REQUIRED
+--  gateway_iplist - a comma separated (array) value of ip/cidr addresses - OPTIONAL
+--  gateway_ip_string - a string [lowercase] that represents the header that a gateway may put in the real ip address in. - OPTIONAL
+
 local iputils = require "resty.iputils"
 local Errors = require "kong.dao.errors"
 
